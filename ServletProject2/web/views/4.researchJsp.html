@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Poll</title>
+</head>
+<body>
+	<h1>Test Personal Style</h1>
+	<p>
+	You will test your style for yourself.<br>
+	Select your favorite items and press the OK button.
+	</p>
+	<form method="post" action="/swp/researchJsp.do">
+		<ul>
+			<li>
+				Name : <input type="text" name="name" size="10" /><br>
+			</li>
+			<li>
+				Favorite color(can only choose one)<br>
+				<input type="radio" name="color" value="purple" id="purple"><label for="purple">Purple</label>
+				<input type="radio" name="color" value="blue" id="blue"><label for="blue">Blue</label>
+				<input type="radio" name="color" value="red" id="red"><label for="red">Red</label>
+				<input type="radio" name="color" value="orange" id="orange"><label for="orange">Orange</label>
+				<input type="radio" name="color" value="green" id="green"><label for="green">Green</label>			
+				<input type="radio" name="color" value="yellow" id="yellow"><label for="yellow">Yellow</label>
+			</li>
+			<li>
+				Favorite Hero(can only choose one)<br>
+				<select name="hero">
+					<option value="ironman">Iron Man</option>
+					<option value="hulk">Hulk</option>
+					<option value="thor">Thor</option>
+					<option value="captainamerica">Captain America</option>
+					<option value="blackwidow">Black Widow</option>
+					<option value="hawkeye">Hawkeye</option>
+					<option value="warmachine">War Machine</option>
+				</select>
+			</li>
+			<li>
+				Favorite movies(can choose several)<br>
+				<input type="checkbox" name="movie" value="ironman1" id="ironman1">
+				<label for="ironman1">Iron Man</label>
+				<input type="checkbox" name="movie" value="ironman2" id="ironman2">
+				<label for="ironman2">Iron Man 2</label>
+				<input type="checkbox" name="movie" value="ironman3" id="ironman3">
+				<label for="ironman3">Iron Man 3</label>
+				<br>
+				<input type="checkbox" name="movie" value="incrediblehulk" id="incrediblehulk">
+				<label for="incrediblehulk">Incredible Hulk</label>
+				<br>
+				<input type="checkbox" name="movie" value="thor1" id="thor1">
+				<label for="thor1">Thor : God of Thunder</label>
+				<input type="checkbox" name="movie" value="thor2" id="thor2">
+				<label for="thor2">Thor : The Dark World</label>
+				<input type="checkbox" name="movie" value="thor3" id="thor3">
+				<label for="thor3">Thor : Ragnarok</label>
+				<br>
+				<input type="checkbox" name="movie" value="captainamerica1" id="captainamerica1">
+				<label for="captainamerica1">Captain America : The First Avenger</label>
+				<input type="checkbox" name="movie" value="captainamerica2" id="captainamerica2">
+				<label for="captainamerica2">Captain America : The Winter Soldier</label>
+				<input type="checkbox" name="movie" value="captainamerica3" id="captainamerica3">
+				<label for="captainamerica3">Captain America : Civil War</label>
+				<br>
+				<input type="checkbox" name="movie" value="avengers1" id="avengers1">
+				<label for="avengers1">The Avengers</label>
+				<input type="checkbox" name="movie" value="avengers2" id="avengers2">
+				<label for="avengers2">The Avengers : Age of Ultron</label>
+				<input type="checkbox" name="movie" value="avengers3" id="avengers3">
+				<label for="avengers3">The Avengers : Infinity War</label>
+			</li>
+			<li>
+				<input type="submit" value="OK">
+				<input type="reset" value="Cancel">
+			</li>
+		</ul>
+	</form>
+</body>
+</html>
