@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Join</title>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+	function validate(){
+		if(true){ // id가 비정상
+			
+			return false;
+		}
+		
+		if(true){ // pw가 비정상
+			
+			return false;
+		}
+		
+		if(true){ // pw와 pwc가 불일치
+			
+			return false;
+		}
+		
+		if(true){ // name가 비정상
+			
+			return false;
+		}
+		
+		if(true){ // tel이 비정상
+			
+			return false;
+		}
+		
+		if(true){ // no gender
+			
+			return false;
+		}
+		
+		return true;		
+	}
+</script>
+</head>
+<body>
+<h1>회원 가입 양식</h1>
+<div>
+	<form method="get" action="/ServletProject/join.do" onsubmit="return validate();">
+		<label for="userid">ID</label>
+		<input type="text" name="userid" id="userid"><br>
+		<label for="userpw">PW</label>
+		<input type="password" name="userpw" id="userpw"><br>
+		<label for="userpwc">Check PW</label>
+		<input type="password" name="userpwc" id="userpwc"><br>
+		<label for="username">Name</label>
+		<input type="text" name="username" id="username"><br>
+		<label for="useremail">email</label>
+		<input type="email" name="useremail" id="useremail"><br>
+		<label for="usertel">Tel.</label>
+		<input type="text" name="usertel1" id="usertel1">-
+		<input type="text" name="usertel2" id="usertel2">-
+		<input type="text" name="usertel3" id="usertel3"><br>
+		<label for="gender">성별</label>
+		<input type="radio" name="gender" id="gender" value="m">남
+		<input type="radio" name="gender" value="f">여<br>
+		<label for="job">직업</label>
+		<select name="job" id="job">
+			<option value="ceo">CEO</option>
+			<option value="president">대통령</option>
+			<option value="professor">교수</option>
+			<option value="politician">정치가</option>
+			<option value="journalist">기자</option>
+			<option value="god">신</option>
+		</select>
+		<br>
+		<label for="hobby">취미</label>
+		<input type="checkbox" name="hobby" value="sports">운동
+		<input type="checkbox" name="hobby" value="videogame">비디오게임
+		<input type="checkbox" name="hobby" value="reading">독서
+		<input type="checkbox" name="hobby" value="watchingtv">tv 시청
+		<input type="checkbox" name="hobby" value="webresearch">웹 검색
+		<input type="checkbox" name="hobby" value="killinggods">신사냥<br>
+		
+		<input type="submit" value="Sign Up">
+		<input type="reset" value="Cancel">
+	</form>
+</div>
+</body>
+</html>
