@@ -66,3 +66,7 @@
 21:28:40.686 [http-nio-8081-exec-23] FATAL com.kh.java.common.filter.LogFilter - Critical Error has happened.
 21:28:45.720 [http-nio-8081-exec-24] FATAL com.kh.java.common.filter.LogFilter - Critical Error has happened.
 21:30:02.170 [http-nio-8081-exec-25] FATAL com.kh.java.common.filter.LogFilter - Critical Error has happened.
+15:58:15.804 [http-nio-8081-exec-4] FATAL com.kh.java.common.filter.LogFilter - Critical Error has happened.
+15:58:17.100 [http-nio-8081-exec-6] FATAL com.kh.java.common.filter.LogFilter - Critical Error has happened.
+15:59:12.128 [http-nio-8081-exec-10] FATAL com.kh.java.common.filter.LogFilter - Critical Error has happened.
+15:59:13.389 [http-nio-8081-exec-5] FATAL com.kh.java.common.filter.LogFilter - Critical Error has happened.

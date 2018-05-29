@@ -8,19 +8,20 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
 
-import org.apache.log4j.Logger;// log4j의 Logger이니 주의!
+import com.kh.java.common.wrapper.EncryptWrapper;
 
 /**
- * Servlet Filter implementation class LogFilter
+ * Servlet Filter implementation class EncryptFilter
  */
-@WebFilter("/*")
-public class LogFilter implements Filter {
-	private Logger logger = Logger.getLogger(LogFilter.class);
+@WebFilter("*.au") // 앞에 /가 있으면 안됨. *.~ 형식만 지원
+public class EncryptFilter implements Filter {
+
     /**
      * Default constructor. 
      */
-    public LogFilter() {
+    public EncryptFilter() {
         // TODO Auto-generated constructor stub
     }
 
@@ -37,9 +38,11 @@ public class LogFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		// TODO Auto-generated method stub
 		// place your code here
-		//logger.fatal("Critical Error has happened.");
+		HttpServletRequest originRequest = (HttpServletRequest)request; // 강제 형변환
+		request.setAttribute("originPassword", originRequest.getParameter("pw")); // 현재 request의 pw 속성명을 originPassword로 적용시킴
+		EncryptWrapper ew = new EncryptWrapper(originRequest);
 		// pass the request along the filter chain
-		chain.doFilter(request, response);
+		chain.doFilter(ew, response);
 	}
 
 	/**
